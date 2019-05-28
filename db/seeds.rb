@@ -75,7 +75,7 @@ event_attributes = [
   {
     name: "RELOAD",
     date: 20190615,
-    description: "Nur weil es ein Sonntag ist, heißt es nicht das bei uns weniger gefeiert und getanzt werden darf.
+    description: "Nur weil es ein Sonntag ist heißt es nicht das bei uns weniger gefeiert und getanzt werden darf.
     Warum auch nicht? Die Tanzflächen sind noch warm, die Anlage noch hochgefahren. Und schon stellt sich wieder der Hunger nach BASS ein. Eine Vorfreude durchzieht den Körper und lässt die Stimmung stetig steigen - endlich 'RELOAD' für alle Nachthelden!
     Flackernde Neonlichter weisen den Weg ins Matrix. Reload! Ist musikalisch ungebunden und extrem tanzbar! Egal ob Hip Hop, Electro oder Housebeats : wer Musik fühlt wird zur Musik (an)tanzen!
     Wir beginnen um 22 Uhr gewohnt entspannt und mit Euren Lieblingsdrinks um alsbald in die Vollen zu gehen.
