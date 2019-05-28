@@ -6,4 +6,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # validates :phone, uniqueness: true
+
+  GENRES = %w[house hip-hop techno mainstream classic]
 end
