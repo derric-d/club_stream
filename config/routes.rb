@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "/dashboard", to: "pages#dashboard"
 
   get "/preferences", to: "pages#preferences"
+
+  get "/whatsapp", to: "pages#whatspp"
 end

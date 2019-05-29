@@ -1,45 +1,15 @@
-
-<h3>checkbox 2</h3>
-
-<%= form_for current_user do |f| %>
-  <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s %>
-  <span class="button"><%= f.submit %></span>
-<% end %>
-
-
-
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8 text-center">
       <h3>What kind of music are you listening to?</h3>
+      <%#= render 'preferences/genres' %>
+      <%= form_for current_user do |f| %>
+      <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s %>
+      <span class="button"><%= f.submit %></span>
+      <% end %>
 
-      <div class="d-flex flex-wrap justify-content-center pt-4">
-        <div class="clickable">
-          <i class="fas fa-futbol"></i>
-          <small>Techno</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-volleyball-ball"></i>
-          <small>HipHop</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-basketball-ball"></i>
-          <small>Mainstream</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-baseball-ball"></i>
-          <small>Electro</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-table-tennis"></i>
-          <small>House</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-hiking"></i>
-          <small>Classic</small>
-        </div>
-      </div>
     </div>
   </div>
+</div>
 
-  <span class="button"><%= link_to "Next", root_path %></span>
+<!--   <span class="button"><%#= link_to "Next", root_path %></span> -->
