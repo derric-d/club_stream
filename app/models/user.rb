@@ -7,5 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # validates :phone, uniqueness: true
 
-  GENRES = %w[house hip-hop techno mainstream classic]
+  GENRES = %w[HipHop Techno Charts Pop 80ies 90ies Disco Afro Rock Reggae Classic Jazz]
+  CLUBS = %w[berghain katerblau]
 end

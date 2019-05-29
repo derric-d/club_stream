@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get "/preferences", to: "pages#preferences"
 
-  get "/whatsapp", to: "pages#whatspp"
+  get "/whatsapp", to: "pages#whatsapp"
 end
