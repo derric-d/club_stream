@@ -8,7 +8,7 @@ class Resident
 
   def find_events
     # url = 'https://www.residentadvisor.net/events/de/berlin/day/2019-05-28'
-    file = 'resAdEvents.html'
+    file = 'resAdvisorEvents.html'
 
     html_file = open(file).read
     html_doc = Nokogiri::HTML(html_file)
