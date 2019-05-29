@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  def users_matching_events
+  def events_matching_users
     Event.tagged_with([@user.tag_list], any: true)
   end
 
