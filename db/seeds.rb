@@ -65,7 +65,6 @@ event_attributes = [
     description: "Der Urban Zoo trommelt diese Woche wieder die wildesten Partylöwen der Stadt zusammen und verwöhnt euch mit Berlins wiiiiildest Hip Hop. Die hungrigsten Tiger, die schönsten Raubkätzchen und die verrückteste Partycrew gibt es nur hier und wir wissen wie man feiert!",
     link: 'https://www.virtualnights.com/berlin/event/urban-zoo.4220453',
     club_name: "THE PEARL",
-    tag_list: ['house', 'classic']
   },
   {
     name: "LOVE THE 80'S - POP & WAVE PARTY",
@@ -76,7 +75,6 @@ event_attributes = [
     Andere wurden zu unsterblichen Königen des Pop wie Michael Jackson oder unerreichbaren Stilikonen wie Madonna.",
     link: 'https://www.virtualnights.com/berlin/event/love-the-80s-pop-wave-party.4239838',
     club_name: "THE PEARL",
-    tag_list: ['classic']
   },
   {
     name: "ZEHN JAHRE MONKEYTOWN RECORDS",
@@ -87,7 +85,6 @@ event_attributes = [
     Anz | Dance System | Kasper Marott | MDSLKTR b2b Gajek | Siriusmo",
     link: 'https://www.virtualnights.com/berlin/event/zehn-jahre-monkeytown-records.4248441',
     club_name: "THE PEARL",
-    tag_list: ['techno', 'pop']
   },
   {
     name: "DIRTYDANCINGPARTY",
@@ -110,7 +107,6 @@ event_attributes = [
     Wir entführen Euch in die Zeit von Lasershows und Nebelschwaden, als noch Pop Titanen und keine One Hit Wonder geschmiedet wurden. Rock, Pop, Disko, Hip Hop, RnB und Synthie Klassiker erwarten Euch. Lederjacke, Neonshirt, Goldkette und Fönfrisur sind bei uns immer willkommen! Wir haben wieder für euch ein Top DJ Team, für diese großartige Partynacht gezaubert.",
     link: 'https://www.virtualnights.com/berlin/event/dirtydancingparty.4241830',
     club_name: "THE PEARL",
-    tag_list: ['hip-hop']
   },
   {
     name: "ASTRA! ASTRA! PARTY! HITS!",
@@ -124,7 +120,6 @@ event_attributes = [
     Bingo Bongo: DJ Catchee (Girlpower)",
     link: 'https://www.virtualnights.com/berlin/event/astra-astra-party-hits.4241491',
     club_name: "THE PEARL",
-    tag_list: ['mainstream']
   },
   {
     name: "KLUBNACHT MIT CHRIS TIETJEN",
@@ -138,7 +133,6 @@ event_attributes = [
     BRUTE CTRL (Berlin)",
     link: 'https://www.virtualnights.com/berlin/event/klubnacht-mit-chris-tietjen.4249612',
     club_name: "THE PEARL",
-    tag_list: ['classic']
   },
   {
     name: "RELOAD",
@@ -151,7 +145,6 @@ event_attributes = [
     Dancehall • Hip-Hop • R&B • Selected House",
     link: 'https://www.virtualnights.com/berlin/event/reload.4223338',
     club_name: "THE PEARL",
-    tag_list: ['techno']
   },
   {
     name: "TECHNO MITTWOCH",
@@ -161,7 +154,6 @@ event_attributes = [
     Techno Jesus",
     link: 'https://www.virtualnights.com/berlin/event/techno-mittwoch.4221938',
     club_name: "THE PEARL",
-    tag_list: ['mainstream']
   },
   {
     name: "ROCK AT SAGE",
@@ -180,7 +172,6 @@ event_attributes = [
     Happy Hour: Cocktails 2for1 von 21 bis 22 Uhr",
     link: 'https://www.virtualnights.com/berlin/event/rock-at-sage.4127242',
     club_name: "THE PEARL",
-    tag_list: ['house']
   },
   {
     name: "Bad Decisions Make Good Stories",
@@ -192,7 +183,6 @@ event_attributes = [
     Mit DJ Lito Bolton, DJ Rokit & DJ Size haben wir auch diesen Donnerstag wieder einen Garanten für die perfekte Nacht!",
     link: 'https://www.virtualnights.com/berlin/event/bad-decisions-make-good-stories.4220588',
     club_name: "THE PEARL",
-    tag_list: ['mainstream']
   },
   {
     name: "ELECTRIC MONDAY AT KIT KAT CLUB",
@@ -202,7 +192,6 @@ event_attributes = [
     NO DRESSCODE – wear what you want – just be yourself!",
     link: 'https://www.virtualnights.com/berlin/event/electric-monday-at-kit-kat-club.4126305',
     club_name: "THE PEARL",
-    tag_list: ['techno', 'house']
   },
   {
     name: "KANTINE DELUXE",
@@ -210,7 +199,6 @@ event_attributes = [
     description: "Kantine deluxe für die crowd deluxe! Wer einmal in der Alten Kantine war, weiß was damit gemeint ist: die eingeschworene Gemeinde, die der guten Alten Kantine seit Jahren die Stange hält und sich selbst immer wieder erneuert. (Wer nicht weiß, worum es hier geht, der sollte sich schnellstens in die Knaackstr. 97 begeben und ein Teil dessen werden.) „You get what you give“ heißt es hier. Dies ist die Party, die EUCH, der Kantinen-Familie, Tribut zollt. Zwei ausgebuffte Trickser stehen dazu abwechselnd hinter den Decks: DJ Pasi, der versierte Allrounder, und DJ Toxic Twin, der gewiefte Spezialist in Fragen der Popmusik-Kultur. Selbstlos und wagemutig steuern diese beiden Helden unaufhaltsam auf den Höhepunkt zu.",
     link: 'https://www.virtualnights.com/berlin/event/kantine-deluxe.4125905',
     club_name: "THE PEARL",
-    tag_list: ['mainstream', 'techno']
   },
   {
     name: "ELECTRO SWING REVOLUTION - FÊTE DE LA MUSIQUE EDITION",
@@ -228,7 +216,6 @@ event_attributes = [
     DJ Dr.Mv",
     link: 'https://www.virtualnights.com/berlin/event/electro-swing-revolution-fete-de-la-musique-edition.4243045',
     club_name: "THE PEARL",
-    tag_list: ['house']
   },
   {
     name: "GENERATION WILD",
@@ -238,7 +225,6 @@ event_attributes = [
     All Time Favourites • Hip-Hop • House • R&B • Top40 • Deephouse • Electro • Progressive House",
     link: 'https://www.virtualnights.com/berlin/event/generation-wild.4223391',
     club_name: "THE PEARL",
-    tag_list: ['classic']
   },
   {
     name: "SCHLAGER AN DER SPREE PARTY",
@@ -246,7 +232,6 @@ event_attributes = [
     description: "Die Berliner Schlager-Community 'Schlager an der Spree' lädt jeden Samstag zur Schlagersause ins Pirates Berlin ein. Tanzt gemeinsam mit vielen anderen Schlagerfans in einer traumhaften Location direkt an der Spree und erlebt unvergessliche Schlagernächte. Es erwarten Euch jeden Samstag die besten Schlager- & Partyhits, wechselnde DJs & Schlager Entertainer sowie die süßen Schlagerettes, die immer Naschereien und lustige Schlager-Accessoires im Gepäck haben. Zum Chillen und Cocktails schlürfen zwischen den Tanzrunden gibt es eine wunderschöne Terrasse direkt am Wasser für die Gäste.",
     link: 'https://www.virtualnights.com/berlin/event/schlager-an-der-spree-party.4125828',
     club_name: "THE PEARL",
-    tag_list: ['house', 'techno', 'hip-hop']
   },
   {
     name: "CIRCUS BIZZARE",
@@ -258,7 +243,6 @@ event_attributes = [
     Alles muss raus, auch die Ängste, die alten und die neuen. Burlesque, Fetisch und Barock treffen auf Dragqueens, Clowns, Liebhaber und Freaks.",
     link: 'https://www.virtualnights.com/berlin/event/circus-bizarre.4239845',
     club_name: "THE PEARL",
-    tag_list: ['house', 'techno']
   }
 ]
 

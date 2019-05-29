@@ -12,6 +12,15 @@ class EventsController < ApplicationController
     end
   end
 
+  # def populate_tags
+  #   @event.description.split.each do |word|
+  #     # unless hedges.include? word
+  #     @event.tag_list.add('word')
+  #   # end
+  #   end
+  #   @event.save
+  # end
+
   private
 
   def event_params
