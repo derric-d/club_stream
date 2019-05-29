@@ -12,5 +12,12 @@ Rails.application.routes.draw do
 
   get "/whatsapp", to: "pages#whatspp"
 
+
   get "/tagged", to: "events#tagged", as: :tagged
+
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
 end
