@@ -11,4 +11,9 @@ Rails.application.routes.draw do
   get "/preferences", to: "pages#preferences"
 
   get "/whatsapp", to: "pages#whatspp"
+
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end
