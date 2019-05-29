@@ -7,7 +7,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
+    if @user.update(user_params)
+      redirect_back(fallback_location: root_path)
+      # redirect_back(fallback_location: preferences_path)
+    else
+      render 'pages/preferences'
+    end
   end
 
   private

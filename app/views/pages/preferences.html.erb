@@ -1,42 +1,19 @@
-<h3>checkbox 2</h3>
-
-<%= form_for current_user do |f| %>
-  <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s %>
-  <span class="button"><%= f.submit %></span>
-<% end %>
-
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-8 text-center">
-      <h3>What kind of music are you listening to?</h3>
-
-      <div class="d-flex flex-wrap justify-content-center pt-4">
-        <div class="clickable">
-          <i class="fas fa-futbol"></i>
-          <small>Techno</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-volleyball-ball"></i>
-          <small>HipHop</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-basketball-ball"></i>
-          <small>Mainstream</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-baseball-ball"></i>
-          <small>Electro</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-table-tennis"></i>
-          <small>House</small>
-        </div>
-        <div class="clickable">
-          <i class="fas fa-hiking"></i>
-          <small>Classic</small>
-        </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2 style="text-align:center; margin:20px 0 10px 0;">Pick your music preferences.</h2>
+      <div class="checkbox-choices">
+        <%= simple_form_for current_user do |f| %>
+        <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s do |b| %>
+          <%= b.check_box %>
+          <%= b.label(class: "collection_check_boxes") do %>
+            <img src="/assets/<%= b.value %>.png" style="height:60px;" alt="<%= b.value %>">
+            <p><%= b.value %></p>
+          <% end %>
+        <% end %>
       </div>
+      <div style="text-align:center;"> <%= f.submit "Save", class: "button-form"%> </div>
+      <% end %>
     </div>
   </div>
-
-  <span class="button"><%= link_to "Next", root_path %></span>
+</div>

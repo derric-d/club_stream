@@ -1,30 +1,38 @@
-.clickable {
-  padding: 40px;
-  width: 180px;
+.collection_check_boxes {
   border: 1px solid #dedede;
-  color: #a0a0a0;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 120px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
+  margin: 6px 3px;
+}
+.checkbox-choices {
+  input {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ label {
+    background-color: white;
+    color: #820263;
+    border-color: black;
+  }
 }
 
-.clickable i {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
 
-.clickable:hover i {
+
+
+.collection_check_boxes:hover {
+  background-color: #f4f4f4;
   color: #820263;
+  border-color: grey;
 }
 
-.clickable.active {
-  color: inherit;
-  border-color: inherit;
-}
-
-.clickable.active i {
+.collection_check_boxes.active {
+  background-color: white;
   color: #820263;
+  border-color: black;
 }
+
+.collection_check_boxes p {
+  margin: 0 auto;
+}
+
