@@ -279,35 +279,35 @@ User.destroy_all
 user_attributes = [
 {
   email: 'derric1abcABC@example.com',
-  phone:'+49 555 555 5555',
+  phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['house', 'mainstream']
 },
 {
   email: 'nina1abcABC@example.com',
-  phone:'+49 555 555 5555',
+  phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['house', 'techno']
 },
 {
   email: 'stefan1abcABC@example.com',
-  phone:'+49 555 555 5555',
+  phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['techno', 'hip-hop']
 },
 {
   email: 'bob1abcABC@example.com',
-  phone:'+49 555 555 5555',
+  phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['house']
 },
 {
   email: 'robert1abcABC@example.com',
-  phone:'+49 555 555 5555',
+  phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['classic']
