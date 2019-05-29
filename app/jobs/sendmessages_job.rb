@@ -7,8 +7,8 @@ class SendmessagesJob < ApplicationJob
         :username => "whudemo1",
         :password => "KdqfQA",
         :sendType => "simple",
-        :text => "Test 123",
-        :msisdn => "491738594856"
+        :text => "Test 123 @user.event.first.name",
+        :msisdn => "@user.phone"
        })
   end
 end
