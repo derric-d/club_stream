@@ -3,9 +3,6 @@ require 'open-uri'
 require 'mechanize'
 
 class ResidentAdvisorScraperService
-  def initialize(user)
-    @user = user
-  end
 
   # def find_events
   #   url = 'https://www.residentadvisor.net/events/de/berlin/day/2019-05-28'
