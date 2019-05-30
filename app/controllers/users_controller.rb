@@ -4,12 +4,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_back(fallback_location: root_path)
-      # redirect_back(fallback_location: preferences_path)
+    tags = params[:user][:tag_list]
+    @user.tag_list = tags
+    if @user.save
+      redirect_to whatsapp_path
     else
       render 'pages/preferences'
     end
@@ -18,6 +18,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :tag_list) ## Rails 4 strong params usage
+    params.require(:user).permit(:username, :tag_lists) ## Rails 4 strong params usage
   end
 end

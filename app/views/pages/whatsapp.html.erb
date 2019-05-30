@@ -1,14 +1,47 @@
-<div class="container">
+<div class="container" style="padding-bottom:40px;">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin: 50px 0 0 0;">
-      <img src="/assets/video.png" alt="Clubbing">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin: 45px 0 0 0;">
+      <img src="/assets/disco.gif" alt="Clubbing" style="width: 95%;">
     </div>
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin: 50px 0 0 0;">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin: 75px 0 0 0;">
       <h1>Only one click away from your perfect night out.</h1>
 
-      <p>Congrats. You're almost done. All there is left to do, is for you to click on the button and send us a "START" message. Then some magic happens and you will receive a message from us with the best events. Just for you. And that's it for now. If you want to change your music preferences or profile you can do so anytime. </p>
+      <p>Congrats. You're almost done. All there is left to do, is for you to click on the button and send us a "START" message. Then some magic happens and you will receive a message from us with the best events. Just for you. And that's it. </p>
 
       <span class="button-form"><a href="https://api.whatsapp.com/send?phone=4917676867398&text=START&source=&data=">Get your events</a></span>
     </div>
   </div>
+</div>
+
+
+
+<div class="profile_box">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN1Q1tzZ3Ox2DKXbmKUfA4Gzt4mnyApK9OjT1v9kqfYtNGaKEG" alt="Profile pic" class="profile_img">
+
+  <h1 style="text-align:center; padding-top:80px;">This is you.</h1>
+  <div class="row" style="margin:0px 80px; justify-content:center;">
+    <% current_user.tag_list.each do |t| %>
+    <span class="tags"> <%= t %></span>
+    <% end  %>
+  </div>
+  <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p><span class="button-form"><%= link_to "Update profile", edit_user_registration_path %></span></p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p><span class="button-form"><%= link_to "Update preferences", preferences_path %></span></p>
+    </div>
+
+  </div>
+
+
+
 </div>
