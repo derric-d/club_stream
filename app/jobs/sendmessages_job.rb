@@ -7,15 +7,15 @@ class SendmessagesJob < ApplicationJob
     message = <<~MESSAGE
 🎊 Your *Clubster* selection for _next_ _days_ 🎉
 
-✅ #{events.last.name} at #{events.last.club_name} on #{events.last.date.strftime("%a, %b %d, %I%P")}, #{events.last.link}
+✅ #{events[0].name} at #{events[0].club_name} on #{events[0].date.strftime("%a, %b %d, %I%P")}, #{events[0].link}
 
-✅ #{events.last.name} at #{events.last.club_id} on #{events.last.date}, rebrand.ly/8ab6f
+✅ #{events[1].name} at #{events[1].club_name} on #{events[1].date.strftime("%a, %b %d, %I%P")}, #{events[1].link}
 
-✅ #{events.last.name} at #{events.last.club_id} on #{events.last.date}, rebrand.ly/8ab6f
+✅ #{events[2].name} at #{events[2].club_name} on #{events[2].date.strftime("%a, %b %d, %I%P")}, #{events[2].link}
 
-✅ #{events.last.name} at #{events.last.club_id} on #{events.last.date}, rebrand.ly/8ab6f
+✅ #{events[3].name} at #{events[3].club_name} on #{events[3].date.strftime("%a, %b %d, %I%P")}, #{events[3].link}
 
-✅ #{events.last.name} at #{events.last.club_id} on #{events.last.date}, rebrand.ly/8ab6f
+✅ #{events[4].name} at #{events[4].club_name} on #{events[4].date.strftime("%a, %b %d, %I%P")}, #{events[4].link}
 
 🎧 Change your preferences on clubster.io/preferences 🎶
     MESSAGE
