@@ -7,7 +7,7 @@ class SendmessagesJob < ApplicationJob
     message = <<~MESSAGE
 🎊 Your *Clubster* selection for _next_ _days_ 🎉
 
-  #{event_message_builder(events)}
+  #{event_message_builder(events).to_s}
 
 🎧 Change your preferences on www.clubster.io/preferences 🎶
     MESSAGE
@@ -25,7 +25,7 @@ class SendmessagesJob < ApplicationJob
   end
 
   def event_message_builder(events)
-    events.each do |event|
+    events.map do |event|
       "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d, %I%P")}, #{event.link}
 
       "
