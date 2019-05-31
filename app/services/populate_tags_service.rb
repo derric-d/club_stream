@@ -8,7 +8,7 @@ class PopulateTagsService
   def initialize(event)
     @event = event
     @allowed_words = load_allowed_words
-    binding.pry
+    # binding.pry
   end
 
   def call

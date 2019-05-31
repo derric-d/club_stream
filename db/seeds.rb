@@ -246,7 +246,6 @@ event_attributes = [
   }
 ]
 
-
 event_attributes.each do |event_attribute|
   club_name = event_attribute.delete(:club_name)
   event = Event.new(event_attribute)
