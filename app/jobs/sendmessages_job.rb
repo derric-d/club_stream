@@ -3,20 +3,10 @@ class SendmessagesJob < ApplicationJob
 
   def perform(user_id)
     user = User.find(user_id)
-    events = Event.tags_for_user(user)
+    events = Event.tags_for_user(user).limit(5)
     message = <<~MESSAGE
 🎊 Your *Clubster* selection for _next_ _days_ 🎉
-
-✅ #{events[0].name} at #{events[0].club_name} on #{events[0].date.strftime("%a, %b %d, %I%P")}, #{events[0].link}
-
-✅ #{events[1].name} at #{events[1].club_name} on #{events[1].date.strftime("%a, %b %d, %I%P")}, #{events[1].link}
-
-✅ #{events[2].name} at #{events[2].club_name} on #{events[2].date.strftime("%a, %b %d, %I%P")}, #{events[2].link}
-
-✅ #{events[3].name} at #{events[3].club_name} on #{events[3].date.strftime("%a, %b %d, %I%P")}, #{events[3].link}
-
-✅ #{events[4].name} at #{events[4].club_name} on #{events[4].date.strftime("%a, %b %d, %I%P")}, #{events[4].link}
-
+  #{event_message_builder(events)}
 🎧 Change your preferences on clubster.io/preferences 🎶
     MESSAGE
 
@@ -30,5 +20,11 @@ class SendmessagesJob < ApplicationJob
         msisdn: "#{user.phone}"
       }
     )
+  end
+
+  def event_message_builder(events)
+    events.map do |event|
+      "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d, %I%P")}, #{event.link}"
+    end
   end
 end
