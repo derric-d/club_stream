@@ -6,8 +6,10 @@ class SendmessagesJob < ApplicationJob
     events = Event.tags_for_user(user).limit(5)
     message = <<~MESSAGE
 🎊 Your *Clubster* selection for _next_ _days_ 🎉
+
   #{event_message_builder(events)}
-🎧 Change your preferences on clubster.io/preferences 🎶
+
+🎧 Change your preferences on www.clubster.io/preferences 🎶
     MESSAGE
 
     HTTP.post(
@@ -23,8 +25,10 @@ class SendmessagesJob < ApplicationJob
   end
 
   def event_message_builder(events)
-    events.map do |event|
-      "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d, %I%P")}, #{event.link}"
+    events.each do |event|
+      "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d, %I%P")}, #{event.link}
+
+      "
     end
   end
 end
