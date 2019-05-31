@@ -22,17 +22,58 @@
 
 .collection_check_boxes:hover {
   background-color: #f4f4f4;
-  color: #820263;
+  color: $clubster;
   border-color: grey;
 }
 
 .collection_check_boxes.active {
   background-color: white;
-  color: #820263;
+  color: $clubster;
   border-color: black;
 }
 
 .collection_check_boxes p {
   margin: 0 auto;
 }
+
+
+
+.collection_check_boxes_club {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 170px;
+  text-align: center;
+  margin: 6px 3px;
+}
+.checkbox-choices {
+  input {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ label {
+    background-color: white;
+    color: $clubster;
+    border-color: black;
+  }
+}
+
+
+
+
+.collection_check_boxes_club:hover {
+  background-color: #f4f4f4;
+  color: $clubster;
+  border-color: grey;
+}
+
+.collection_check_boxes_club.active {
+  background-color: white;
+  color: $clubster;
+  border-color: black;
+}
+
+.collection_check_boxes_club p {
+  margin: 0 auto;
+}
+
 

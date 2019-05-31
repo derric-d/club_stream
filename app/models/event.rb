@@ -5,6 +5,11 @@ class Event < ApplicationRecord
   validates :name, :link, :date, presence: true
 
   after_create :populate_tags
+  # after_create :resident_advisor_scraper
+
+  # def ResidentAdvisorScraperService
+  #   ResidentAdvisorScraperService.new(self).call
+  # end
 
   def populate_tags
     PopulateTagsService.new(self).call

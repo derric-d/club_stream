@@ -9,7 +9,9 @@ class User < ApplicationRecord
 
 
   GENRES = %w[HipHop Techno Charts Pop 80ies 90ies Disco Afro Rock Reggae Classic Jazz]
-  CLUBS = %w[berghain katerblau]
+  CLUBS = ["Berghain", "Kater Blau", "Sage club", "Kit Kat", "THE PEARL", "Insomnia", "Cassiopeia",
+    "Astra Kulturhaus", "AVA Club", "Matrix", "Sage club", "PURO Sky Lounge",
+    "Alte Kantine", "Frannz Club", "Pirates Berlin"]
 
   # def event_params
   #   params.require(:event).permit(:email, :phone, :city, tag_list: []) ## Rails 4 strong params usage
