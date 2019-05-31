@@ -3,25 +3,32 @@ class SendmessagesJob < ApplicationJob
 
   def perform(user_id)
     user = User.find(user_id)
-    HTTP.post("https://gate.appworkx.de/ws/send.php?",
-      :json => {
-        :username => "whudemo1",
-        :password => "KdqfQA",
-        :sendType => "simple",
-        :text => "🎊 Your *Clubster* selection for _next_ _weekend_🎉
+    events = Event.tags_for_user(user)
+    message = <<~MESSAGE
+🎊 Your *Clubster* selection for _next_ _days_ 🎉
 
-✅ #{Event.tagged_with([User.last.tag_list], any: true).last.name} at #{Event.tagged_with([User.last.tag_list], any: true).last.club_id} on #{Event.tagged_with([User.last.tag_list], any: true).last.date}, rebrand.ly/8ab6f
+✅ #{events[0].name} at #{events[0].club_name} on #{events[0].date.strftime("%a, %b %d, %I%P")}, #{events[0].link}
 
-✅ #{Event.tagged_with([User.last.tag_list], any: true).last.name} at #{Event.tagged_with([User.last.tag_list], any: true).last.club_id} on #{Event.tagged_with([User.last.tag_list], any: true).last.date}, rebrand.ly/8ab6f
+✅ #{events[1].name} at #{events[1].club_name} on #{events[1].date.strftime("%a, %b %d, %I%P")}, #{events[1].link}
 
-✅ #{Event.tagged_with([User.last.tag_list], any: true).last.name} at #{Event.tagged_with([User.last.tag_list], any: true).last.club_id} on #{Event.tagged_with([User.last.tag_list], any: true).last.date}, rebrand.ly/8ab6f
+✅ #{events[2].name} at #{events[2].club_name} on #{events[2].date.strftime("%a, %b %d, %I%P")}, #{events[2].link}
 
-✅ #{Event.tagged_with([User.last.tag_list], any: true).last.name} at #{Event.tagged_with([User.last.tag_list], any: true).last.club_id} on #{Event.tagged_with([User.last.tag_list], any: true).last.date}, rebrand.ly/8ab6f
+✅ #{events[3].name} at #{events[3].club_name} on #{events[3].date.strftime("%a, %b %d, %I%P")}, #{events[3].link}
 
-✅ #{Event.tagged_with([User.last.tag_list], any: true).last.name} at #{Event.tagged_with([User.last.tag_list], any: true).last.club_id} on #{Event.tagged_with([User.last.tag_list], any: true).last.date}, rebrand.ly/8ab6f
+✅ #{events[4].name} at #{events[4].club_name} on #{events[4].date.strftime("%a, %b %d, %I%P")}, #{events[4].link}
 
-🎧 Enjoy your parties 🎶",
-        :msisdn => "#{user.phone}"
-       })
+🎧 Change your preferences on clubster.io/preferences 🎶
+    MESSAGE
+
+    HTTP.post(
+      "https://gate.appworkx.de/ws/send.php?",
+      json: {
+        username: ENV['WAUSERNAME'],
+        password: ENV['WAPASSWORD'],
+        sendType: "simple",
+        text: message,
+        msisdn: "#{user.phone}"
+      }
+    )
   end
 end

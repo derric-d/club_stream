@@ -247,12 +247,14 @@ Event.destroy_all
 # ]
 
 
+
 # event_attributes.each do |event_attribute|
 #   club_name = event_attribute.delete(:club_name)
 #   event = Event.new(event_attribute)
 #   event.club = Club.find_by(name: club_name)
 #   event.save!
 # end
+
 
 # puts 'Created events'
 

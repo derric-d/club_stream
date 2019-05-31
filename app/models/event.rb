@@ -11,6 +11,10 @@ class Event < ApplicationRecord
   #   ResidentAdvisorScraperService.new(self).call
   # end
 
+  def self.tags_for_user(user)
+    tagged_with([user.tag_list], any: true)
+  end
+
   def populate_tags
     PopulateTagsService.new(self).call
   end
