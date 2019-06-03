@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   validates :name, :link, :date, presence: true
 
   after_create :populate_tags
-  after_create :create_shorturls
+  after_commit :create_shorturls, on: :create
   # after_create :resident_advisor_scraper
 
   # def ResidentAdvisorScraperService
@@ -21,8 +21,9 @@ class Event < ApplicationRecord
   end
 
   def create_shorturls
-    CreatelinksJob.perform_now
+    CreatelinksJob.perform_later(self.id)
   end
+
   # def event_params
   #   params.require(:event).permit(:name, :date, :description, :link, tag_list: []) ## Rails 4 strong params usage
   # end
