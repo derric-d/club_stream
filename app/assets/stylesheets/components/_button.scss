@@ -14,14 +14,15 @@
   border: 2px solid $button-hover;
 }
 
-.button a {
+a.button {
   text-decoration: none;
   font-size: 18px;
   color: white;
 }
 
-.button:hover a {
+a.button:hover {
   color: black;
+  text-decoration:none;
 }
 
 
@@ -33,6 +34,8 @@
   transition-duration: 0.1s;
   padding: 10px 25px;
   border-radius: 24px;
+  min-width: 120px;
+
 }
 
 
@@ -41,18 +44,14 @@
   color: white;
 }
 
-.button-form a {
+a.button-form {
   text-decoration: none;
   font-size: 18px;
   color: white;
 }
 
 input.button-form {
-  font-size: 18px;
-}
-
-input.button-form:hover {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 

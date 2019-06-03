@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get "/whatsapp", to: "pages#whatsapp"
 
+  get "/privacy", to: "pages#privacy"
+
 
   get "/tagged", to: "events#tagged", as: :tagged
 
