@@ -26,7 +26,7 @@ class SendmessagesJob < ApplicationJob
 
   def event_message_builder(events)
     events.map do |event|
-      "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d, %I%P")}, #{event.link}
+      "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d")}, #{event.Shorturl}
 
       "
     end
