@@ -19,7 +19,7 @@ class ResidentAdvisorScraperService
     end
 
     # event_links = event_links[0..5]
-      # Event.destroy_all
+    # Event.destroy_all
     event_links.each do |link|
       event_page = link.click
       ra_id = event_page.uri.to_s.scan(/\/([0-9]+)/).first.first.to_i
