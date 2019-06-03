@@ -29,7 +29,6 @@ class ResidentAdvisorScraperService
       parent_classes = link.node.parent['class'].split
       parent_classes.any? { |p| ["event-title"].include?(p) }
     end
-
     # event_links = event_links[0..5]
     event_links.each do |link|
       begin

@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # validates :phone, uniqueness: true
 
-
+  CITIES = ["Hamburg", "Berlin", "Munich"]
   GENRES = %w[HipHop Techno Charts Pop 80ies 90ies Disco Afro Rock Reggae Classic Jazz]
   CLUBS = ["Berghain", "Kater Blau", "Sage club", "Kit Kat", "THE PEARL", "Insomnia", "Cassiopeia",
     "Astra Kulturhaus", "AVA Club", "Matrix", "Sage club", "PURO Sky Lounge",
