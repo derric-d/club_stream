@@ -1,16 +1,16 @@
-<div class="banner">
+<div class="container-fluid">
   <img src="/assets/lobster-pink.png" alt="Party Lobster" style="height:120px;"><br>
 
-<span class="typed"></span>
+<span class="typed">&nbsp;</span>
 
 <p> Where can I go dancing this week? Discover the best events. Based on your preferences. Brought to you by clubster.</p>
-<span class="button"> <%= link_to "Get the party started", new_user_registration_path %></span>
+<%= link_to "Get the party started", new_user_registration_path, { :class =>"button" } %>
 
 
 </div>
 
-<div style="background-color: #ffffff;padding:20px 0;">
-  <h2 style="text-align:center; padding:20px 0;">Never miss a single party.<br>We make it easy for you.</h4>
+<div class="d-none d-md-block" style="background-color: #ffffff;padding:20px 0;">
+  <h2 style="text-align:center; padding:20px 0;">Never miss a single party.</h4>
     <div class="row">
       <div class="col-md-4" style="text-align:center;">
         <img src="https://images.ctfassets.net/t9x0u6p47op0/5YvLStiym4yPJe3QerVfS8/c74265dac189de59971046bec9d9e3e1/icon_1_3x.gif" alt="Personalization" style="height:70px; margin: 0 auto;">
@@ -27,8 +27,69 @@
     </div>
   </div>
 
+
+  <div class="d-md-none" style="background-color: white; padding: 20px 0;">
+    <h2 style="text-align:center; padding:20px 0;">Never miss a single party.</h4>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-12">
+              <center> <img src="https://images.ctfassets.net/t9x0u6p47op0/5YvLStiym4yPJe3QerVfS8/c74265dac189de59971046bec9d9e3e1/icon_1_3x.gif" alt="Personalization" style="height:100px; margin: 0 auto;"></center>
+            </div>
+            <div class="carousel-text col-12">
+              <p>Tell us a little about yourself.<br>We're good listeners.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12">
+              <center> <img src="https://images.ctfassets.net/t9x0u6p47op0/6eaQZ8J7TlvBlOP58RQuhb/7694baaa08780586890d089a5f1584c6/icon_2_3x.gif" alt="Recommendation" style="height:100px; margin: 0 auto;"></center>
+            </div>
+            <div class="carousel-text col-12">
+              <p>Get your personalized<br>event recommendation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12">
+              <center> <img src="https://images.ctfassets.net/t9x0u6p47op0/6wjhOg2n0StKCr70hysSF8/00dd024e31413f77abda093e3fa9bf82/icon_3_3x.gif" alt="Party" style="height:100px; margin: 0 auto;"></center>
+            </div>
+            <div class="carousel-text col-12">
+              <p>Update your profile anytime.<br>And keep the party going.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+
   <div class="container" style="text-align:center;">
-    <h2 style="text-align:center; padding:20px 0;">Let's make it happen.</h4>
-    <p>Once you've signed up, you will get all events directly on your phone every week. For free. Sounds awesome? Then sign up.</p>
-    <span class="button"> <%= link_to "Get started", new_user_registration_path %></span>
+    <h2 style="text-align:center; padding:20px 0;">We make it easy for you.</h4>
+    <p>Once you've signed up, you will get all events directly on your phone every week. For free. Sounds awesome?</p>
+    <%= link_to "Sign up", new_user_registration_path, { :class=>"button"} %>
   </div>

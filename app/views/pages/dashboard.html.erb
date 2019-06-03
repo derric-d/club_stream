@@ -16,12 +16,12 @@
 
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <p style="font-size: 16px;"> Your email changed, you want to change your password or unsubscribe? <br></p>
-      <p><span class="button-form"><%= link_to "Update profile", edit_user_registration_path %></span></p>
+      <p> <%= link_to "Update profile", edit_user_registration_path, { :class=>"button-form" }  %></span></p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <p style="font-size: 16px;"> Your taste in music or clubs changed or you want to try something new?</p>
-      <p><span class="button-form"><%= link_to "Update preferences", preferences_path %></span></p>
+      <p><%= link_to "Update preferences", preferences_path, { :class=>"button-form"} %></p>
     </div>
 
   </div>
