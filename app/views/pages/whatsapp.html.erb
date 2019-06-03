@@ -23,7 +23,7 @@
 
   <h1 style="text-align:center; padding-top:80px;">This is you.</h1>
   <div class="row" style="margin:0px 80px; justify-content:center;">
-    <% current_user.tag_list.each do |t| %>
+    <% current_user.tag_list.sort.each do |t| %>
     <span class="tags"> <%= t %></span>
     <% end  %>
   </div>

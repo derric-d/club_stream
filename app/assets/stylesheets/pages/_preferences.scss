@@ -7,6 +7,7 @@
   margin: 6px 3px;
 }
 .checkbox-choices {
+  text-align:center;
   input {
     display: none;
   }
@@ -16,8 +17,6 @@
     border-color: black;
   }
 }
-
-
 
 
 .collection_check_boxes:hover {
@@ -58,8 +57,6 @@
 }
 
 
-
-
 .collection_check_boxes_club:hover {
   background-color: #f4f4f4;
   color: $clubster;
@@ -75,5 +72,33 @@
 .collection_check_boxes_club p {
   margin: 0 auto;
 }
+
+
+form {
+  text-align: center;
+}
+
+
+@media (max-width: 767px) {
+  .collection_check_boxes {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 7px 7px;
+  width: 100px;
+  text-align: center;
+  margin: 4px 2px;
+}
+}
+
+
+.collection_check_boxes_club {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 160px;
+  text-align: center;
+  margin: 6px 3px;
+}
+
 
 
