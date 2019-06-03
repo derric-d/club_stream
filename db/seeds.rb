@@ -2,49 +2,49 @@ puts "Destroying all clubs..."
 
 Club.destroy_all
 
-# puts "Creating the clubs..."
+puts "Creating the clubs..."
 
-# club_attributes = [
-#   {
-#     name: "THE PEARL"
-#   },
-#   {
-#     name: "Insomnia"
-#   },
-#   {
-#     name: "Berghain"
-#   },
-#   {
-#     name: "Cassiopeia"
-#   },
-#   {
-#     name: "Astra Kulturhaus"
-#   },
-#   {
-#     name: "AVA Club"
-#   },
-#   {
-#     name: "Matrix"
-#   },
-#   {
-#     name: "Sage club"
-#   },
-#   {
-#     name: "PURO Sky Lounge"
-#   },
-#   {
-#     name: "Kit Kat"
-#   },
-#   {
-#     name: "Alte Kantine"
-#   },
-#   {
-#     name: "Frannz Club"
-#   },
-#   {
-#     name: "Pirates Berlin"
-#   }
-# ]
+club_attributes = [
+  {
+    name: "THE PEARL"
+  },
+  {
+    name: "Insomnia"
+  },
+  {
+    name: "Berghain"
+  },
+  {
+    name: "Cassiopeia"
+  },
+  {
+    name: "Astra Kulturhaus"
+  },
+  {
+    name: "AVA Club"
+  },
+  {
+    name: "Matrix"
+  },
+  {
+    name: "Sage club"
+  },
+  {
+    name: "PURO Sky Lounge"
+  },
+  {
+    name: "Kit Kat"
+  },
+  {
+    name: "Alte Kantine"
+  },
+  {
+    name: "Frannz Club"
+  },
+  {
+    name: "Pirates Berlin"
+  }
+]
 
 # club_attributes.each do |club_attribute|
 #   Club.create!(club_attribute)
@@ -256,7 +256,7 @@ Event.destroy_all
 # end
 
 
-# puts 'Created events'
+puts 'Created events'
 
 puts "Destroying all Users..."
 
