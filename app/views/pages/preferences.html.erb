@@ -1,6 +1,6 @@
 <div class="container" style="margin-bottom:50px;">
   <div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class=".col-xs-4 .col-sm-4">
       <h2 style="text-align:center; margin:20px 0 10px 0;">Pick your music preferences.</h2>
 
 
@@ -19,13 +19,14 @@
 
       <div class="checkbox-choices">
         <h2 style="text-align:center; margin:50px 0 10px 0;">Pick your favorite clubs.</h2>
-        <%= f.collection_check_boxes :tag_list, User::CLUBS, :to_s, :to_s do |b| %>
+        <%= f.collection_check_boxes :tag_list, User::CLUBS.sort, :to_s, :to_s do |b| %>
           <%= b.check_box %>
           <%= b.label(class: "collection_check_boxes_club") do %>
             <p style="text-align:center;"><%= b.value %></p>
           <% end %>
         <% end %>
       </div>
+
 
       <div style="text-align:center;">
         <%= f.submit "Save", class: "button-form"%>

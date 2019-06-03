@@ -6,3 +6,10 @@
 .typed-cursor {
   // display:none;
 }
+
+
+@media (max-width: 767px) {
+  .typed {
+    font-size: 40px;
+  }
+}
