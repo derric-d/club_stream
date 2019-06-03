@@ -5,11 +5,11 @@ class SendmessagesJob < ApplicationJob
     user = User.find(user_id)
     events = Event.tags_for_user(user).limit(5)
     message = <<~MESSAGE
-🎊 Your *Clubster* selection for _next_ _days_ 🎉
+🎧 Your *Clubster* selection for _next_ _days_ 🎧
 
-  #{event_message_builder(events).to_s}
+#{event_message_builder(events)}
 
-🎧 Change your preferences on www.clubster.io/preferences 🎶
+Change your preferences on www.clubster.io/preferences 🎧
     MESSAGE
 
     HTTP.post(
@@ -18,6 +18,8 @@ class SendmessagesJob < ApplicationJob
         username: ENV['WAUSERNAME'],
         password: ENV['WAPASSWORD'],
         sendType: "simple",
+        filename: "https://source.unsplash.com/random(800x800)",
+        type: "image",
         text: message,
         msisdn: "#{user.phone}"
       }
@@ -26,9 +28,7 @@ class SendmessagesJob < ApplicationJob
 
   def event_message_builder(events)
     events.map do |event|
-      "✅ #{event.name} at #{event.club_name} on #{event.date.strftime("%a, %b %d")}, #{event.Shorturl}
-
-      "
-    end
+      "✔️ *#{event.name}* at #{event.club_name} on #{event.date.strftime("%a, %b %d")}, #{event.shorturl}"
+    end.join("\n\n")
   end
 end
