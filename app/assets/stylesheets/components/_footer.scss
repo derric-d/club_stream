@@ -1,0 +1,52 @@
+.footer {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin: 40px auto 0 auto;
+  width: 100%;
+}
+
+.footer img {
+  height: 35px;
+  object-fit: cover;
+  align: center;
+}
+
+
+ul.icons-inline {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.icons-inline li {
+  color: $clubster;
+  display: inline-block;
+  font-size: 33px;
+  margin: 2px 3px;
+}
+
+
+.footer i {
+  color: $clubster;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: $secondary;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.footer:hover a {
+  color: black;
+}
+
+.footer p {
+  color: $secondary;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
