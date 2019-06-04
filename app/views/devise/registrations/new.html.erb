@@ -21,6 +21,9 @@
     <%= f.input :password_confirmation,
     required: true,
     input_html: { autocomplete: "new-password" } %>
+    <%= f.check_box :terms_accepted,
+    required: true,
+    autofocus: true %> <span>I agree to the <%= link_to "Privacy Policy", privacy_path  %> <abbr title="required">*</abbr></span>
   </div>
 
   <div class="form-actions">

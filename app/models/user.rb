@@ -1,11 +1,11 @@
 class User < ApplicationRecord
-
   acts_as_taggable
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :phone, presence: true
+  validates :terms_accepted, acceptance: true
   # after_update :async_update
 
   GENRES = %w[HipHop Techno Charts Pop 80ies 90ies Disco Afro Rock Reggae Classic Jazz]
@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
   private
 
-  def async_update
-    SendmessagesJob.perform_now(self.id)
-  end
+  # def async_update
+  #   SendmessagesJob.perform_now(self.id)
+  # end
 end
