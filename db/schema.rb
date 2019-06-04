@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_081454) do
+ActiveRecord::Schema.define(version: 2019_06_04_143936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 2019_06_04_081454) do
     t.string "lineup"
     t.string "shorturl"
     t.index ["club_id"], name: "index_events_on_club_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "text"
+    t.bigint "users_id"
+    t.index ["users_id"], name: "index_messages_on_users_id"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -74,9 +80,11 @@ ActiveRecord::Schema.define(version: 2019_06_04_081454) do
     t.string "image_url"
     t.boolean "subscribed"
     t.boolean "terms_accepted", default: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "events", "clubs"
+  add_foreign_key "messages", "users", column: "users_id"
 end

@@ -40,9 +40,8 @@ class ResidentAdvisorScraperService
       name = event_page.search('h1')[0].text
       description = event_page.search('#event-item .left p')[1].text
       full_link = 'https://www.residentadvisor.net' + link.uri.to_s
-      event = Event.find_by(ra_id: ra_id)
-      event ||= Event.new
-      event.update!(date: date, name: name, link: full_link, description: description, club_name: club_name, club: club, ra_id: ra_id, lineup: lineup)
+      event = Event.find_by(ra_id: ra_id) || Event.new
+      event.update(date: date, name: name, link: full_link, description: description, club_name: club_name, club: club, ra_id: ra_id, lineup: lineup)
     end
   end
 end
