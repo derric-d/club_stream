@@ -9,14 +9,12 @@
       <span class="tags"> <%= t %></span>
       <% end  %>
     </div> <br>
-    <p> <%= link_to "Update preferences", preferences_path, { :class=>"button-border"} %></p>
-    <h4 style="padding-top:20px;">Update your settings</h4>
+    <p> <%= link_to "Update preferences", preferences_path, { :class=>"button-form"} %></p>
+    <h3 style="padding-top:20px;">Update your settings</h3>
 
-    <p style="text-align: center;">New phone, who dis? Change email, password etc. here.</p>
-    <p> <%= link_to "Update profile", edit_user_registration_path, { :class=>"button-border" }  %></p>
+    <p style="text-align: justify;">New phone, who dis? Change your personal information. <%= link_to "Update profile >", edit_user_registration_path, { :class=>"button-underline" }  %></p>
 
-    <p style="text-align: center;">Retiring from partying? </p>
-    <p> <%= link_to "Unsubscribe", edit_user_registration_path, { :class=>"button-border" }  %></p>
+    <p style="text-align: justify;">Retiring from partying? <%= link_to "Unsubscribe >", edit_user_registration_path, { :class=>"button-underline" }  %></p>
   </div>
 </div>
 
