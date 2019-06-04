@@ -1,4 +1,30 @@
-<div class="container">
+ <!-- for screens smaller sm -->
+
+ <div class="profile-mobile d-md-none">
+  <div class="profile-mobile-box">
+    <h3>Your taste. Your events.</h3>
+
+    <div class="row" style="margin:0px 0px; justify-content:center;">
+      <% current_user.tag_list.sort.each do |t| %>
+      <span class="tags"> <%= t %></span>
+      <% end  %>
+    </div> <br>
+    <p> <%= link_to "Update preferences", preferences_path, { :class=>"button-border"} %></p>
+    <h4 style="padding-top:20px;">Update your settings</h4>
+
+    <p style="text-align: center;">New phone, who dis? Change email, password etc. here.</p>
+    <p> <%= link_to "Update profile", edit_user_registration_path, { :class=>"button-border" }  %></p>
+
+    <p style="text-align: center;">Retiring from partying? </p>
+    <p> <%= link_to "Unsubscribe", edit_user_registration_path, { :class=>"button-border" }  %></p>
+  </div>
+</div>
+
+
+
+<!-- For screens bigger md -->
+
+<div class="container d-none d-md-block">
   <div class="profile_box" style="margin-top:90px;">
 
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN1Q1tzZ3Ox2DKXbmKUfA4Gzt4mnyApK9OjT1v9kqfYtNGaKEG" alt="Profile pic" class="profile_img">
@@ -16,7 +42,7 @@
 
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <p style="font-size: 16px;"> Your email changed, you want to change your password or unsubscribe? <br></p>
-      <p> <%= link_to "Update profile", edit_user_registration_path, { :class=>"button-form" }  %></span></p>
+      <p> <%= link_to "Update profile", edit_user_registration_path, { :class=>"button-form" }  %></p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">

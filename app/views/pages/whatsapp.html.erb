@@ -1,4 +1,28 @@
-<div class="container" style="padding-bottom:40px;">
+ <!-- for screens smaller sm -->
+
+ <div class="profile-mobile d-md-none">
+  <div class="profile-mobile-box">
+    <h3>Only one click away from your perfect night out.</h3>
+    <p style="text-align: justify;">Congrats. You're almost done. All there is left to do, is for you to click on the button and send us a "START" message. Then some magic happens and you will receive a message from us with the best events. Just for you. And that's it. </p>
+    <span class="button-form"><a href="https://api.whatsapp.com/send?phone=4917676867398&text=START&source=&data=">Get your events</a></span>
+    <br><br>
+    <h3>Your taste. Your events.</h3>
+
+    <div class="row" style="margin:0px 0px; justify-content:center;">
+      <% current_user.tag_list.sort.each do |t| %>
+      <span class="tags"> <%= t %></span>
+      <% end  %>
+    </div> <br>
+    <p> <%= link_to "Update preferences", preferences_path, { :class=>"button-form"} %></p>
+  </div>
+</div>
+
+
+
+
+<!-- For screens bigger md -->
+
+<div class="container d-none d-md-block" style="padding-bottom:40px;">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin: 30px 0 0 0;">
       <img src="https://s3.gifyu.com/images/clubster-whatsapp.gif" alt="Clubbing" style="width: 95%;margin-left:20px;">
@@ -9,19 +33,21 @@
       <p>Congrats. You're almost done. All there is left to do, is for you to click on the button and send us a "START" message. Then some magic happens and you will receive a message from us with the best events. Just for you. And that's it. </p>
 
       <span class="button-form"><a href="https://api.whatsapp.com/send?phone=4917676867398&text=START&source=&data=">Get your events</a></span>
+
     </div>
   </div>
+
+<br><br>
 </div>
 
 
-<br><br>
 
 
-<div class="profile_box">
+<div class="profile_box d-none d-md-block">
 
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN1Q1tzZ3Ox2DKXbmKUfA4Gzt4mnyApK9OjT1v9kqfYtNGaKEG" alt="Profile pic" class="profile_img">
 
-  <h1 style="text-align:center; padding-top:80px;">This is you.</h1>
+  <h1 style="text-align:center; padding-top:80px;">Your taste. Your events.</h1>
   <div class="row" style="margin:0px 80px; justify-content:center;">
     <% current_user.tag_list.sort.each do |t| %>
     <span class="tags"> <%= t %></span>

@@ -5,8 +5,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :phone, presence: true
-  validates :terms_accepted, acceptance: true
+  validates :phone, presence: true, format: { with: /^[^0+]\d*/, :multiline => true, message: "number not valid; see placeholder" }
+  validates :terms_accepted, acceptance: { message: 'is required' }
+  validates :email, presence: true, format: { with: /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/, :multiline => true, message: "not valid"}
   # after_update :async_update
 
   GENRES = %w[HipHop Techno Charts Pop 80ies 90ies Disco Afro Rock Reggae Classic Jazz]
