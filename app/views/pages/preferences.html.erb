@@ -1,11 +1,11 @@
 
-<div class="profile-mobile d-md-none">
-  <div class="profile-mobile-box">
+<div class="profile-mobile">
 
+  <div class="profile-mobile-box">
     <div class="row justify-content-center">
 
       <div class=".col-xs-4 .col-sm-4">
-        <h2 style="text-align:center; margin:20px 0 10px 0;">Pick your music preferences.</h2>
+        <h3 style="text-align:center; margin:10px 0 15px 0;">Pick your music genres.</h3>
 
 
         <div class="checkbox-choices">
@@ -21,27 +21,26 @@
           <% end %>
         </div>
       </div>
+    </div>
+  </div>
+  <br>
 
 
-
-      <div class="profile-mobile-box">
-        <div class="checkbox-choices">
-          <h2 style="text-align:center; margin:50px 0 10px 0;">Pick your favorite clubs.</h2>
+    <div class="profile-mobile-box">
+      <div class="checkbox-choices">
+        <h3 style="text-align:center; margin:10px 0 15px 0;">Pick your favorite clubs.</h3>
           <%= f.collection_check_boxes :tag_list, User::CLUBS.sort, :to_s, :to_s do |b| %>
           <%= b.check_box %>
           <%= b.label(class: "collection_check_boxes_club") do %>
           <p style="text-align:center;"><%= b.value %></p>
           <% end %>
           <% end %>
-        </div>
-        <div style="text-align:center;">
-          <%= f.submit "Save", class: "button-form"%>
-        </div>
-       <% end %>
       </div>
-
+      <div style="text-align:center;">
+          <%= f.submit "Save", class: "button-form"%>
+      </div>
+          <% end %>
     </div>
 
-  </div>
 </div>
 
