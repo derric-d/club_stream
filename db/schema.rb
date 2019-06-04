@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_081454) do
     t.string "city"
     t.string "image_url"
     t.boolean "subscribed"
+    t.boolean "terms_accepted", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
