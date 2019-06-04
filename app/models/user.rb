@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
   private
 
-  def async_update
-    SendmessagesJob.perform_now(self.id)
-  end
+  # def async_update
+  #   SendmessagesJob.perform_now(self.id)
+  # end
 end
