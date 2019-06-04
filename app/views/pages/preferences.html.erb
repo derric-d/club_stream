@@ -1,38 +1,48 @@
-<div class="container" style="margin-bottom:50px;">
-  <div class="row justify-content-center">
-    <div class=".col-xs-4 .col-sm-4">
-      <h2 style="text-align:center; margin:20px 0 10px 0;">Pick your music preferences.</h2>
+
+<div class="profile-mobile d-md-none">
+  <div class="profile-mobile-box">
+
+    <div class="row justify-content-center">
+      <div class=".col-xs-4 .col-sm-4">
+        <h2 style="text-align:center; margin:20px 0 10px 0;">Pick your music preferences.</h2>
 
 
-      <div class="checkbox-choices">
-        <%= simple_form_for current_user do |f| %>
+        <div class="checkbox-choices">
+          <%= simple_form_for current_user do |f| %>
 
 
-        <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s do |b| %>
+          <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s do |b| %>
           <%= b.check_box %>
           <%= b.label(class: "collection_check_boxes") do %>
-            <img src="/assets/<%= b.value %>.png" style="height:60px;" alt="<%= b.value %>">
-            <p><%= b.value %></p>
+          <img src="/assets/<%= b.value %>.png" style="height:60px;" alt="<%= b.value %>">
+          <p><%= b.value %></p>
           <% end %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
 
-      <div class="checkbox-choices">
-        <h2 style="text-align:center; margin:50px 0 10px 0;">Pick your favorite clubs.</h2>
-        <%= f.collection_check_boxes :tag_list, User::CLUBS.sort, :to_s, :to_s do |b| %>
+
+
+      <div class="profile-mobile-box">
+        <div class="checkbox-choices">
+          <h2 style="text-align:center; margin:50px 0 10px 0;">Pick your favorite clubs.</h2>
+          <%= f.collection_check_boxes :tag_list, User::CLUBS.sort, :to_s, :to_s do |b| %>
           <%= b.check_box %>
           <%= b.label(class: "collection_check_boxes_club") do %>
-            <p style="text-align:center;"><%= b.value %></p>
+          <p style="text-align:center;"><%= b.value %></p>
           <% end %>
+          <% end %>
+        </div>
+
+
+        <div style="text-align:center;">
+          <%= f.submit "Save", class: "button-form"%>
+        </div>
+
         <% end %>
       </div>
-
-
-      <div style="text-align:center;">
-        <%= f.submit "Save", class: "button-form"%>
-      </div>
-      <% end %>
 
     </div>
   </div>
 </div>
+
