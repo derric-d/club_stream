@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :phone, presence: true
-  after_update :async_update
+  # after_update :async_update
 
   GENRES = %w[HipHop Techno Charts Pop 80ies 90ies Disco Afro Rock Reggae Classic Jazz]
   CLUBS = ["Berghain", "Kater Blau", "Sisyphos", "KitKat", "Watergate", "Ritter Butzke", "GoldenGate", "Insomnia", "Cassiopeia",
