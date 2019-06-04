@@ -268,35 +268,44 @@ user_attributes = [
   phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
-  tag_list: ['house', 'mainstream']
+  tag_list: ['house', 'mainstream'],
+  terms_accepted: 'true'
 },
 {
   email: 'nina1abcABC@example.com',
   phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
-  tag_list: ['house', 'techno']
+  tag_list: ['house', 'techno'],
+  terms_accepted: 'true'
+
 },
 {
   email: 'stefan1abcABC@example.com',
   phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
-  tag_list: ['techno', 'hip-hop']
+  tag_list: ['techno', 'hip-hop'],
+  terms_accepted: 'true'
+
 },
 {
   email: 'bob1abcABC@example.com',
   phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
-  tag_list: ['house']
+  tag_list: ['house'],
+  terms_accepted: 'true'
+
 },
 {
   email: 'robert1abcABC@example.com',
   phone:'491738594856',
   city: 'berlin',
   password: '123ABC',
-  tag_list: ['classic']
+  tag_list: ['classic'],
+  terms_accepted: 'true'
+
 }
 ]
 
