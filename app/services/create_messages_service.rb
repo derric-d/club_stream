@@ -1,29 +1,32 @@
 class CreateMessagesService
 
-  def create_message(user_id)
-      user = User.find(user_id)
-      events = Event.tags_for_user(user).limit(5)
-      message = <<~MESSAGE
-  🎧 Your *Clubster* selection for _next_ _days_ 🎧
+  def create_message(user)
+    events = Event.tags_for_user(user).limit(5)
+    events.each do |event|
+      if event.date > Date.today
+        message = <<~MESSAGE
+        🎧 Your *Clubster* selection for _next_ _days_ 🎧
 
-  #{event_message_builder(events)}
+        #{event_message_builder(events)}
 
-  Change your preferences on www.clubster.io/preferences 🎧
-      MESSAGE
+        Change your preferences on www.clubster.io/preferences 🎧
+        MESSAGE
 
-      HTTP.post(
-        "https://gate.appworkx.de/ws/send.php?",
-        json: {
-          username: ENV['WAUSERNAME'],
-          password: ENV['WAPASSWORD'],
-          sendType: "simple",
-          filename: "https://source.unsplash.com/random(800x800)",
-          type: "image",
-          text: message,
-          msisdn: "#{user.phone}"
-         }
-       )
-     end
+        HTTP.post(
+          "https://gate.appworkx.de/ws/send.php?",
+          json: {
+            username: ENV['WAUSERNAME'],
+            password: ENV['WAPASSWORD'],
+            sendType: "simple",
+            filename: "https://source.unsplash.com/random(800x800)",
+            type: "image",
+            text: message,
+            msisdn: "#{user.phone}"
+          }
+          )
+      end
+    end
+  end
 
      def event_message_builder(events)
        events.map do |event|
