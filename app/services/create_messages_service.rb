@@ -1,6 +1,7 @@
 class CreateMessagesService
 
   def create_message(user)
+
     events = Event.tags_for_user(user).limit(10)
     events.each do |event|
       if event.date > Date.today
@@ -25,7 +26,7 @@ class CreateMessagesService
             msisdn: "#{user.phone}"
           }
         )
-        Message.create(user: user, content: message)
+        Message.create(user_id: user.id)
         # Message.save!
       end
     end
