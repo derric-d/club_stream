@@ -1,7 +1,7 @@
 class CreateMessagesService
 
   def create_message(user)
-    events = Event.tags_for_user(user).limit(10)
+    events = Event.tags_for_user(user).limit(5)
     events.each do |event|
       if event.date > Date.today
         message = <<~MESSAGE
