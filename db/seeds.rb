@@ -265,7 +265,7 @@ User.destroy_all
 user_attributes = [
 {
   email: 'derric1abcABC@example.com',
-  phone:'491738594856',
+  phone:'4917621161231',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['house', 'mainstream'],
@@ -273,7 +273,7 @@ user_attributes = [
 },
 {
   email: 'nina1abcABC@example.com',
-  phone:'491738594856',
+  phone:'1234567890',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['house', 'techno'],
@@ -291,7 +291,7 @@ user_attributes = [
 },
 {
   email: 'bob1abcABC@example.com',
-  phone:'491738594856',
+  phone:'41234567890',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['house'],
@@ -300,7 +300,7 @@ user_attributes = [
 },
 {
   email: 'robert1abcABC@example.com',
-  phone:'491738594856',
+  phone:'1234567890',
   city: 'berlin',
   password: '123ABC',
   tag_list: ['classic'],

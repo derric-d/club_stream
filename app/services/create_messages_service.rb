@@ -23,7 +23,8 @@ class CreateMessagesService
             text: message,
             msisdn: "#{user.phone}"
           }
-          )
+        )
+        Message.create(user: user, content: message)
       end
     end
   end
