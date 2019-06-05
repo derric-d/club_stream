@@ -1,7 +1,14 @@
+.carousel {
+  background-color: white;
+  padding: 20px 0;
+  border-top-right-radius: 45px;
+}
+
 .carousel-text p {
   color: black;
   text-align: center;
   padding-bottom: 30px;
+  font-size: 20px;
 }
 
 .carousel-indicators li {
@@ -19,13 +26,13 @@
 
 .carousel-control-next-icon:after
 {
-  content: '>';
-  font-size: 50px;
+  // content: '>';
+  font-size: 20px;
   color: black;
 }
 
 .carousel-control-prev-icon:after {
-  content: '<';
+  // content: '<';
   font-size: 50px;
   color: black;
 }

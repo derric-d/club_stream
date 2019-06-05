@@ -24,7 +24,9 @@ class CreateMessagesService
             text: message,
             msisdn: "#{user.phone}"
           }
-          )
+        )
+        Message.create(user_id: user_id, content: message)
+        Message.save!
       end
     end
   end
