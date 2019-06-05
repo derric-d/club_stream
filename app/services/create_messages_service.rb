@@ -17,9 +17,10 @@ class CreateMessagesService
           json: {
             username: ENV['WAUSERNAME'],
             password: ENV['WAPASSWORD'],
-            sendType: "simple",
-            filename: "https://source.unsplash.com/random(800x800)",
-            # type: "image",
+            sendType: "image",
+            fileType: "image",
+            filename: "Clubster",
+            file: "clubster-logo.jpeg",
             text: message,
             msisdn: "#{user.phone}"
           }
