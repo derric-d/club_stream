@@ -1,4 +1,25 @@
 // Specific CSS for your home-page
+.container-fluid {
+  background-image: url('/assets/test1.jpg');
+  background-color: inherit;
+  background-repeat: no-repeat;
+  // background-size: cover;
+  height: 100%;
+  margin: 0 auto;
+  padding: 45px 0 0 0;
+  // padding: 30px 20px;
+}
+
+
+.home {
+  padding: 30px 15px 40px 14px;
+  // background-color: #F4F4F4;
+  background:rgba(255,255,255, 0.95);
+  // border-radius: 30px;
+  border-top-right-radius: 60px;
+}
+
+
 .typed {
   font-size: 50px;
 }
