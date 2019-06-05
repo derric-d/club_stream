@@ -1,16 +1,18 @@
 <div class="container-fluid" >
+  <div class="home">
   <img src="/assets/lobster-pink.png" alt="Party Lobster" style="height:120px;"><br>
   <span class="typed">&nbsp;</span>
   <p> Where can I go dancing this week? Discover the best events. Based on your preferences. Brought to you by clubster.</p>
   <%= link_to "Get the party started", new_user_registration_path, { :class =>"button" } %>
+</div>
 </div>
 
 
 
   <!-- for screens smaller sm -->
 
-  <div class="d-md-none" style="background-color: white; padding: 20px 0;">
-    <h2 style="text-align:center; padding-bottom:10px;">Never miss a single party.</h4>
+  <div class="carousel d-md-none">
+    <h2 style="text-align:center; padding:10px 0;">Never miss a single party.</h4>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -63,11 +65,22 @@
       </div>
   </div>
 
-
+<!--
   <div class="d-md-none">
     <div class="container" style="text-align:center;">
       <h2 style="text-align:center; padding:20px 0 0 0; margin:0;">We make it easy for you.</h4>
-        <img src="/assets/clubster.gif" style="width: 90%" alt="Whatsapp messages">
+        <img src="/assets/clubster-cut.gif" style="width: 90%" alt="Whatsapp messages">
+        <p>Once you've signed up, you will get all events directly on your phone every week. For free. Sounds awesome?</p>
+        <%#= link_to "Sign up", new_user_registration_path, { :class=>"button"} %>
+    </div>
+  </div>
+ -->
+
+  <div class="container-fluid d-md-none">
+    <img src="/assets/clubster-left.gif" style="width: 80%" alt="Whatsapp messages">
+    <div class="home" style="text-align:center;">
+      <h2 style="text-align:center; margin:0;">We make it easy for you.</h4>
+
         <p>Once you've signed up, you will get all events directly on your phone every week. For free. Sounds awesome?</p>
         <%= link_to "Sign up", new_user_registration_path, { :class=>"button"} %>
     </div>
