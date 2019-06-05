@@ -15,10 +15,10 @@ class CreateMessagesService
       json: {
         username: ENV['WAUSERNAME'],
         password: ENV['WAPASSWORD'],
-        sendType: "image",
-        fileType: "image",
-        filename: "Clubster",
-        file: "clubster-logo.jpeg",
+        sendType: "simple",
+        # fileType: "image",
+        # filename: "Clubster",
+        # file: "clubster-logo.jpeg",
         text: message,
         msisdn: "#{user.phone}"
       }
