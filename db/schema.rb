@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_131346) do
     t.date "date"
     t.bigint "ra_id"
     t.string "lineup"
-    t.string "Shorturl"
+    t.string "shorturl"
     t.index ["club_id"], name: "index_events_on_club_id"
   end
 
