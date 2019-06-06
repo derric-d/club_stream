@@ -16,13 +16,28 @@
 
 a.button {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
 }
 
 a.button:hover {
   color: black;
   text-decoration:none;
+}
+
+.button-whatsapp {
+  color: white;
+  background-color: #26D366;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.2s;
+  padding: 12px 25px;
+  border-radius: 24px;
+}
+
+.button-whatsapp a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
 }
 
 
