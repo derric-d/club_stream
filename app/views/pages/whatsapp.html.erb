@@ -1,12 +1,17 @@
  <!-- for screens smaller sm -->
 
+
  <div class="profile-mobile d-md-none">
-  <div class="profile-mobile-box">
-    <h3>Only one click away to your perfect night out.</h3>
-    <p style="text-align: justify;">Congrats. You're almost done. All there is left to do, is for you to click on the button and send us a "START" message. Then some magic happens and you will receive a message from us with the best events. Just for you. And that's it. </p>
-    <span class="button-form"><a href="https://api.whatsapp.com/send?phone=4917676867398&text=START&source=&data=">Get your events</a></span>
-    <br><br>
-    <h3 style="padding-top:20px;">Your taste. Your events.</h3>
+  <div class="profile-mobile-box" style="padding: 45px 15px 55px 15px; margin-top:10px;">
+    <h3 style="padding-bottom:10px;">WhatsApp Event Alert</h3>
+<!--     <p style="text-align: justify;">Congrats. You're almost done. All there is left to do, is for you to click on the button and send us a "START" message. Then some magic happens and you will receive a message from us with the best events. Just for you. And that's it. </p> -->
+    <p style="text-align: justify; padding-bottom:20px;">You never wanna miss out on a good party? Then click on the button, send us a "START" message and get the best events directly to your phone.<sup>*</sup></p>
+    <span class="button-whatsapp"><a href="https://api.whatsapp.com/send?phone=4917676867398&text=START&source=&data="><i class="fab fa-whatsapp"></i> Get your events</a></span>
+  </div>
+
+
+  <div class="profile-mobile-box" style="margin-top:40px; margin-bottom:15px;">
+    <h3 style="padding-top:10px;">Your taste. Your events.</h3>
 
     <div class="row" style="margin:0px 0px; justify-content:center;">
       <% current_user.tag_list.sort.each do |t| %>
@@ -14,9 +19,9 @@
       <% end  %>
     </div> <br>
     <p> <%= link_to "Update preferences", preferences_path, { :class=>"button-form"} %></p>
+    <p style="font-size:10px; padding-top:10px;"><i>*free service. You can unsubscribe anytime you want.</i></p>
   </div>
 </div>
-
 
 
 
