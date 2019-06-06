@@ -3,7 +3,7 @@ class SendmessagesJob < ApplicationJob
 
   def perform
     # change date.today to tuesday for production
-    if Date.today.wednesday?
+    if Date.today.thursday?
       User.find_each do |user|
         new_message = CreateMessagesService.new
         new_message.create_message(user)
