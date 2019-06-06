@@ -22,7 +22,7 @@ class CreateMessagesService
         text: message,
         msisdn: "#{user.phone}"
       }
-      )
+    )
     Message.create(user_id: user.id, content: message)
     puts "#{message} sent to #{user.email}"
   end
