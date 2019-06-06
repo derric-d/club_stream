@@ -8,32 +8,33 @@ class CreateMessagesService
         message = <<~MESSAGE
         🎧 Your *Clubster* selection for _next_ _days_ 🎧
 
-    events = Event.tags_for_user(user).limit(10)
-    message = <<~MESSAGE
-    🎧 Your *Clubster* selection for _next_ _days_ 🎧
+        events = Event.tags_for_user(user).limit(10)
+        message = <<~MESSAGE
+        🎧 Your *Clubster* selection for _next_ _days_ 🎧
 
 
-    #{event_message_builder(events)}
+        #{event_message_builder(events)}
 
-    Change your preferences on www.clubster.io/preferences 🎧
-    MESSAGE
+        Change your preferences on www.clubster.io/preferences 🎧
+        MESSAGE
 
-    HTTP.post(
-      "https://gate.appworkx.de/ws/send.php?",
-      json: {
-        username: ENV['WAUSERNAME'],
-        password: ENV['WAPASSWORD'],
-        sendType: "simple",
+        HTTP.post(
+          "https://gate.appworkx.de/ws/send.php?",
+          json: {
+            username: ENV['WAUSERNAME'],
+            password: ENV['WAPASSWORD'],
+            sendType: "simple",
         # fileType: "image",
         # filename: "Clubster",
         # file: "clubster-logo.jpeg",
         text: message,
         msisdn: "#{user.phone}"
       }
-    )
-    Message.create(user_id: user.id, content: message)
-    puts "#{message} sent to #{user.email}"
-  end
+      )
+        Message.create(user_id: user.id, content: message)
+        puts "#{message} sent to #{user.email}"
+      end
+    end
 
   def event_message_builder(events)
     events.map do |event|
@@ -43,3 +44,8 @@ class CreateMessagesService
     end.join("\n\n")
   end
 end
+
+
+
+
+
