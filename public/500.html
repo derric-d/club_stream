@@ -5,47 +5,48 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
 
+  body {
+    margin: 0px;
+  }
+
   h1 {
-    font-size: 60px;
+    font-size: 45px;
     color: white;
-    text-shadow: -2px 4px 1px rgb(64,64,64);
 
   }
 
   h2 {
     font-size: 26px;
     color: white;
-    text-shadow: -2px 4px 1px rgb(64,64,64);
   }
 
-  .bg {
-  /* The image used */
-  background-image: url("https://pbs.twimg.com/media/DzogJmOX4AEX2JZ.jpg");
+  .error-pic {
+    width: 100%;
+    margin: 45px 0;
+  }
 
-  /* Full height */
-  height: 100%;
 
-  /* Center and scale the image nicely */
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  .background {
+    background-color: black;
+  }
 
   .error-container {
     margin-left: 5px;
     padding: 10px;
     text-align: center;
-    /*width: 450px;*/
+    width: auto;
   }
 
   </style>
 </head>
 
-<body class=" bg">
+<body class=" background">
   <!-- This file lives in public/404.html -->
   <div class="bg"></div>
   <div class="error-container">
     <h1>The Party can't continue...</h1>
     <h2>It's your server's fault (500)</h2>
   </div>
+  <img class="error-pic" src="https://pbs.twimg.com/media/DzogJmOX4AEX2JZ.jpg" alt="People looking at you at party meme">
 </body>
 </html>
