@@ -2,13 +2,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 
 // Define fonts for body and headers
-$body-font: "Roboto", "sans-serif";
-// $body-font: "Open Sans", "Helvetica", "sans-serif";
+// $body-font: "Roboto", "sans-serif";
+$body-font: "Open Sans", "Helvetica", "sans-serif";
 // $headers-font: "Raleway", "Helvetica", "sans-serif";
 
 // $headers-font: "Hind Madurai", "sans-serif";
-// $headers-font: "Julius Sans One", "sans-serif";
-$headers-font: "Open Sans", "sans-serif";
+// $headers-font: "Open Sans", "sans-serif";
+// $headers-font: 'Biryani', "sans-serif";
+// $headers-font: 'Cabin Condensed', "sans-serif";
+// $headers-font: "Roboto", "sans-serif";
+// $headers-font: "Josefin Sans", "sans-serif";
+$headers-font: "PT Sans", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
