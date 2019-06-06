@@ -1,9 +1,17 @@
 class CreateMessagesService
 
   def create_message(user)
+<<<<<<< HEAD
+    events = Event.tags_for_user(user).limit(5)
+    events.each do |event|
+      if event.date > Date.today
+        message = <<~MESSAGE
+        🎧 Your *Clubster* selection for _next_ _days_ 🎧
+=======
     events = Event.tags_for_user(user).limit(10)
     message = <<~MESSAGE
     🎧 Your *Clubster* selection for _next_ _days_ 🎧
+>>>>>>> 0dab14f8b3ad4e145996e805f108ba67f712e323
 
     #{event_message_builder(events)}
 
