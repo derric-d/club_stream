@@ -36,12 +36,13 @@ class CreateMessagesService
       end
     end
 
-  def event_message_builder(events)
-    events.map do |event|
-      if event.date > Date.today
-        "✔️ *#{event.name}* at #{event.club_name} on #{event.date.strftime("%a, %b %d")}, #{event.shorturl}"
-      end
-    end.join("\n\n")
+    def event_message_builder(events)
+      events.map do |event|
+        if event.date > Date.today
+          "✔️ *#{event.name}* at #{event.club_name} on #{event.date.strftime("%a, %b %d")}, #{event.shorturl}"
+        end
+      end.join("\n\n")
+    end
   end
 end
 
