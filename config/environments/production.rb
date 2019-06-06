@@ -84,6 +84,9 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+  GoogleTagManager.gtm_id = "GTM-NHN9JRB" # Where GTM-XXXX is your container ID from Google Tag Manager
+
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
