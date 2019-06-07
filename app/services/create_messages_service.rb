@@ -8,11 +8,6 @@ class CreateMessagesService
         message = <<~MESSAGE
         🎧 Your *Clubster* selection for _next_ _days_ 🎧
 
-        events = Event.tags_for_user(user).limit(10)
-        message = <<~MESSAGE
-        🎧 Your *Clubster* selection for _next_ _days_ 🎧
-
-
         #{event_message_builder(events)}
 
         Change your preferences on www.clubster.io/preferences 🎧
