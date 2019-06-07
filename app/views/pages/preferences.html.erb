@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
 
       <div class=".col-xs-4 .col-sm-4">
-        <h3 style="text-align:center; margin-top:10px 0 0 0;">Pick your music genres.</h3>
-        <p style="font-size:10px; margin:0 0 15px 0;"><i>You should at least pick 10 overall</i></p>
+        <h3 style="text-align:center; margin-top:10px 0 0 0;">Pick your jam</h3>
+        <p style="font-size:10px; margin:0 0 15px 0;"><i>You should at least pick 10 in total</i></p>
         <div class="checkbox-choices">
           <%= simple_form_for current_user do |f| %>
           <%= f.collection_check_boxes :tag_list, User::GENRES, :to_s, :to_s do |b| %>
@@ -25,7 +25,7 @@
 
   <div class="profile-mobile-box">
     <div class="checkbox-choices">
-      <h3 style="text-align:center; margin:10px 0 15px 0;">Pick your favorite clubs.</h3>
+      <h3 style="text-align:center; margin:10px 0 15px 0;">Pick your favorite clubs</h3>
       <%= f.collection_check_boxes :tag_list, User::CLUBS.sort, :to_s, :to_s do |b| %>
       <%= b.check_box %>
       <%= b.label(class: "collection_check_boxes_club") do %>
